@@ -1,6 +1,11 @@
-<!DOCTYPE html><html  lang="it"><head><title data-rh="true"></title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>BluRoster</title><meta name="application-name" content="BluRoster"/><meta name="description" content="Roster pilota — Duty Plan CrewLink"/><meta name="theme-color" content="#0B2A4A"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-title" content="BluRoster"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><link rel="apple-touch-icon" href="./apple-touch-icon.png"/><link rel="manifest" href="./manifest.json"/><style id="expo-reset">#root,body,html{height:100%}body{overflow:hidden}#root{display:flex}</style><style>
+<!DOCTYPE html><html  lang="it"><head><title data-rh="true"></title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>BluRoster</title><meta name="application-name" content="BluRoster"/><meta name="description" content="Roster pilota — Duty Plan CrewLink"/><meta name="theme-color" content="#0B2A4A"/><meta name="color-scheme" content="light dark"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-title" content="BluRoster"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><link rel="apple-touch-icon" href="./apple-touch-icon.png"/><link rel="manifest" href="./manifest.json"/><style id="expo-reset">#root,body,html{height:100%}body{overflow:hidden}#root{display:flex}</style><style>
 body {
   background-color: #0B2A4A;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #070F1A;
+  }
 }
 </style><style id="react-native-stylesheet">[stylesheet-group="0"]{}
 body{margin:0;}
@@ -17,6 +22,7 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-11mg6pl{border-bottom-color:rgba(255,255,255,1.00);border-left-color:rgba(255,255,255,1.00);border-right-color:rgba(255,255,255,1.00);border-top-color:rgba(255,255,255,1.00);}
 .r-12kx4ge{flex:1.2;}
 .r-13awgt0{flex:1;}
+.r-146eth8{padding:3px;}
 .r-1867qdf{border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;}
 .r-1aw8g68{border-bottom-color:rgba(213,224,236,1.00);border-left-color:rgba(213,224,236,1.00);border-right-color:rgba(213,224,236,1.00);border-top-color:rgba(213,224,236,1.00);}
 .r-1awa8pu{border-bottom-color:rgba(101,119,134,1.00);border-left-color:rgba(101,119,134,1.00);border-right-color:rgba(101,119,134,1.00);border-top-color:rgba(101,119,134,1.00);}
@@ -59,7 +65,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-s88bda{display:contents;}
 .r-t60dpp{padding:0px;}
 .r-wg31gx{border-bottom-color:rgba(49,53,56,1.00);border-left-color:rgba(49,53,56,1.00);border-right-color:rgba(49,53,56,1.00);border-top-color:rgba(49,53,56,1.00);}
-.r-whuqzp{padding:18px;}
 .r-xoduu5{display:inline-flex;}
 .r-ywje51{margin:auto;}
 .r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
@@ -128,14 +133,12 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-11v9fek{min-width:180px;}
 .r-11yh6sk{overflow-x:hidden;}
 .r-12f6czt{top:17px;}
-.r-12rqra3{padding-bottom:6px;}
 .r-12vffkv>* {pointer-events:auto;}
 .r-12vffkv{pointer-events:none!important;}
 .r-135wba7{line-height:24px;}
 .r-13aq9py{animation-name:r-1iq689l;}
 .r-13qz1uu{width:100%;}
 .r-13tjlyg{transition-duration:0.1s;}
-.r-1444osr{margin-top:18px;}
 .r-1472mwg{height:24px;}
 .r-14gqq1x{margin-top:4px;}
 .r-14j35gi{color:rgba(90,107,128,1.00);}
@@ -193,8 +196,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-1ff274t{text-align:right;}
 .r-1ffj0ar{background-color:rgba(0,0,0,0.40);}
 .r-1fpi9eo{background-color:rgba(255,255,255,0.12);}
-.r-1fze9x5{color:rgba(20,55,95,1.00);}
-.r-1g1ybnn{background-color:rgba(232,242,252,1.00);}
 .r-1g80hic{opacity:0.8;}
 .r-1ge9hsw{max-width:960px;}
 .r-1ghxqbu{font-variant:tabular-nums;}
@@ -209,7 +210,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-1iln25a{word-wrap:normal;}
 .r-1inkyih{font-size:17px;}
 .r-1iusvr4{flex-basis:0px;}
-.r-1iww7jx{width:28px;}
 .r-1janqcz{width:16px;}
 .r-1jkjb{margin-left:8px;}
 .r-1jtin5c{background-color:rgba(21,101,192,1.00);}
@@ -229,10 +229,8 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-1ny4l3l{outline-style:none;}
 .r-1ocf4r9{scroll-snap-type:y mandatory;}
 .r-1onu96p{border-curve:continuous;}
-.r-1oo4jis{border-top-color:rgba(213,224,236,1.00);}
 .r-1oszu61{align-items:stretch;}
 .r-1otgn73{touch-action:manipulation;}
-.r-1ozqkpa{text-transform:capitalize;}
 .r-1p0dtai{bottom:0px;}
 .r-1pi2tsx{height:100%;}
 .r-1pm8pkb{font-family:Courier;}
@@ -249,8 +247,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-1sxrcry{background-size:auto;}
 .r-1udbk01{text-overflow:ellipsis;}
 .r-1ui5ee8{font-size:32px;}
-.r-1uwte3a{padding-bottom:40px;}
-.r-1vqm0tc{color:rgba(11,42,74,1.00);}
 .r-1vr29t4{font-weight:800;}
 .r-1w6e6rj{flex-wrap:wrap;}
 .r-1wbh5a2{flex-shrink:1;}
@@ -294,7 +290,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-76blku{height:21px;}
 .r-7a29px{width:64px;}
 .r-7cikom{font-size:inherit;}
-.r-7p11b{color:rgba(255,255,255,0.75);}
 .r-7q8q6z{cursor:default;}
 .r-8akbws{-webkit-box-orient:vertical;}
 .r-8ay8q1{letter-spacing:0.1px;}
@@ -345,7 +340,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-kemksi{background-color:rgba(0,0,0,1.00);}
 .r-kizejy{color:rgba(155,161,166,1.00);}
 .r-knv0ih{margin-top:8px;}
-.r-l71dzp{margin-top:14px;}
 .r-le4sbl{margin-bottom:18px;}
 .r-leqjx2{animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);}
 .r-lltvgl{overflow-x:auto;}
@@ -361,7 +355,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-n6v787{font-size:13px;}
 .r-njirmc{color:rgba(21,101,192,1.00);}
 .r-o4n3w5{width:23px;}
-.r-obd0qt{align-items:flex-end;}
 .r-ojf8lh{gap:6px;}
 .r-orgf3d{opacity:0;}
 .r-q4m81j{text-align:center;}
@@ -377,16 +370,13 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-sgbo92{opacity:0.9;}
 .r-si08z8{color:rgba(18,35,58,1.00);}
 .r-so7y2g{line-height:64px;}
-.r-tgkchw{color:rgba(196,123,23,1.00);}
 .r-tskmnb{padding-top:8px;}
 .r-tsynxw{text-transform:uppercase;}
-.r-ttdzmv{padding-top:12px;}
 .r-u6sd8q{background-repeat:no-repeat;}
 .r-u8s1d{position:absolute;}
 .r-u92y06{background-color:rgba(255,165,0,1.00);}
 .r-uaa2di{gap:10px;}
 .r-ubezar{font-size:16px;}
-.r-ud0q2t{letter-spacing:1px;}
 .r-uho16t{font-size:34px;}
 .r-v1sgqt{background-color:rgba(255,255,255,0.15);}
 .r-vacyoi{padding-bottom:64px;}
@@ -398,7 +388,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-ws9h79{left:4px;}
 .r-x11e5r{font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
 .r-x3cy2q{background-size:100% 100%;}
-.r-xd6kpl{padding-bottom:8px;}
 .r-xx3c9p{animation-name:r-imtty0;}
 .r-y7v2we{background-color:rgba(32,36,37,1.00);}
 .r-yc9v9c{width:22px;}
@@ -417,5 +406,5 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 @keyframes r-1pzkwqh{0%{transform:translateY(100%);}100%{transform:translateY(0%);}}
 @keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
 @keyframes r-q67da2{0%{transform:translateX(-100%);}100%{transform:translateX(400%);}}
-@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><link rel="icon" href="/bluroster-web/favicon.ico"/><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"></div></div><script src="/bluroster-web/_expo/static/js/web/entry-95cc14043183ed97bae1baffaf8d95ef.js" defer></script>
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><link rel="icon" href="/bluroster-web/favicon.ico"/><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"></div></div><script src="/bluroster-web/_expo/static/js/web/entry-91520f7fd39ff5c227dd30ad0a19d077.js" defer></script>
 </body></html>
