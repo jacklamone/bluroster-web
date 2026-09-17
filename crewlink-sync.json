@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-09-17T16:30:02.967Z",
+  "syncedAt": "2026-09-17T17:42:23.382Z",
   "source": "crewlink",
   "crewId": "IT410700",
   "pilot": {
@@ -15,7 +15,7 @@
     "pilotId": "pilot-giacomo-conti",
     "provider": "crewlink",
     "externalUserLabel": "IT410700 CONTI, GIACOMO",
-    "lastSyncAt": "2026-09-17T16:30:02.967Z"
+    "lastSyncAt": "2026-09-17T17:42:23.382Z"
   },
   "periods": [
     {
@@ -3768,6 +3768,43 @@
       "folderSourcePath": "imports/lido-crewbriefing-az630-2026-09-15.txt",
       "aiBriefing": "### 1) Overview volo\n- **Volo:** AZ 630  \n- **Data:** 15 settembre 2026  \n- **Rotta:** FCO - MIA  \n- **Marche:** EITYD  \n- **Versione OFP:** 19/0/1  \n- **ETD:** 08:35  \n- **CTOT:** 08:56  \n\n### 2) Fuel e tempo (tabella OFP)\n- **TRIP:** 57,435 kg / 10.24  \n- **CONT 3%:** 1,723 kg  \n- **ALTN:** 2,675 kg (KFLL) / 00.30  \n- **FINRES:** 2,261 kg  \n- **EXTRA WX:** 2,316 kg  \n- **PLNTOF:** 66,410 kg  \n- **TAXI:** 588 kg  \n- **BLOCK:** 66,998 kg (= PLNTOF 66,410 + TAXI 588; linea BLOCK stampata vuota → regola Block Fuel)  \n- **TCAP:** 110,576 kg  \n\n### 3) MEL / deferred rilevanti per l'operazione\n- **GPS #1 inoperativo** (MEL 34-50-08D)  \n- **Orologio elettrico inoperativo** (MEL 31-20-01A)  \n- **Unità di visualizzazione SD - blank** (MEL 31-63-01CC)  \n- **CSDSS inoperativo** (MEL 23-72-01A)  \n- **APU inoperativo** (MEL 49-10-01A)  \n- **Indicatore di pressione pneumatici inoperativo** (MEL 32-07-07A)  \n\n### 4) Note operative\n- **Sicurezza:** Volo soggetto a security search, considerato sensibile ai sensi del PNS.  \n- **Prossimo volo:** AZ 631, MIA - FCO, partenza prevista alle 23:45E (come da next leg OFP AZ00631/15).  \n- **Avvisi:** Si raccomanda di prestare attenzione alle condizioni meteorologiche in rotta e a destinazione. Si segnala una moderata turbolenza prevista sopra FL400 e la presenza di cumulonembi occasionali fino a FL470.  \n- **ETOPS:** Volo ETOPS 180 minuti.  \n- **Raccomandazioni NAT:** Utilizzare SLOP in spazio aereo NAT, e inviare RCL 90–30 minuti prima dell'ingresso nell'oceano.  \n\nAssicuratevi di controllare tutti i sistemi e di seguire le procedure standard prima del decollo. Buon volo.",
       "sourceNote": "Riepilogo da Lido Crew Briefing OFP (documento confidenziale). Full folder bundled for Briefing AI retrieval; UI mostra solo sintesi."
+    },
+    {
+      "id": "lido-ofp-az631-2026-09-17",
+      "dutyEventId": "evt-2026-09-17-az631-1",
+      "flightNumber": "AZ631",
+      "callsign": "AZ631",
+      "date": "2026-09-17",
+      "route": "MIA-FCO",
+      "departureAirport": "MIA",
+      "arrivalAirport": "FCO",
+      "routeIcao": "KMIA-LIRF",
+      "registration": "EIHPB",
+      "ofpVersion": "pub",
+      "etd": "20:30",
+      "tripTime": "10.10",
+      "melSummary": [],
+      "source": "lido",
+      "rawExcerpt": "AZ631/17Sep26/KMIA-LIRF Reg:EIHPB · ETD local 16:30 / UTC 20:30 (Show Crew) · Arr FCO 08:40+1 · Block 10:10 · Pax 251 · Payload 23655 · OFP fuel/MEL/NOTAM: in pacchetto Lido quando pubblicato nel sync",
+      "folderExcerpt": "=== AZ631 / 17Sep26 / MIA-FCO · operational package (CrewLink Briefing + Show Crew) ===\nSource: Briefing Data printed 17Sep26-1519 · Show Crew MIA 2030 / 0640 FCO (UTC)\nFull Lido OFP fuel table / MEL / NOTAM: publish via lido-ofp-import when txt available.\n\n--- FLIGHT INFO ---\nDate: 17Sep26\nFlight: AZ631  Callsign: AZ631\nDep: MIA 1630 local  Arr: FCO 0840+1 local  Block: 10:10\nEquipment: 339/EIHPB  Registration: EIHPB\nPrev: AZ630 1414  Next: AZ630 1040\nPax: 251  Payload: 23655\nCTOT: -\n\nShow Crew header (UTC): AZ 631 17Sep26 MIA 2030 0640 FCO\n\n--- AIRCRAFT ---\nEIHPB  339/J30E24Y237VV26\n\n--- INFLIGHT REST (Flight AZ631 17Sep26) ---\nRecommended Cockpit IFR Slots:\nSlot 01 Class: 1 Seat: 1 2115-2315 (02:00)\nSlot 02 Class: 1 Seat: 1 0018-0218 (02:00)\nSlot 03 Class: 1 Seat: 1 0321-0451 (01:30)\nRecommended Cabin IFR Slots:\nSlot 01 Class: 1 Seat: 1 2115-2245 (01:30)\nSlot 02 Class: 1 Seat: 1 0135-0305 (01:30)\nSlot 03 Class: 1 Seat: 2 2115-2245 (01:30)\nSlot 04 Class: 1 Seat: 2 0135-0305 (01:30)\nSlot 05 Class: 1 Seat: 3 2115-2245 (01:30)\nSlot 06 Class: 1 Seat: 4 2115-2245 (01:30)\nSlot 07 Class: 1 Seat: 5 2115-2245 (01:30)\nSlot 08 Class: 1 Seat: 5 0135-0305 (01:30)\nSlot 09 Class: 1 Seat: 6 2115-2245 (01:30)\nSlot 10 Class: 1 Seat: 6 0135-0305 (01:30)\n\n--- OFP FUEL / MEL / NOTAM ---\n[pending full Lido Crew Briefing folder for AZ631 — Block Fuel = PLNTOF+TAXI when table present]\n",
+      "folderSectionsPresent": [
+        "flight_info",
+        "aircraft",
+        "ifr_slots",
+        "show_crew_times"
+      ],
+      "folderSectionsMissing": [
+        "ofp_fuel",
+        "mel_deferred",
+        "notam_bulletin",
+        "etops",
+        "optiflight",
+        "raim",
+        "gendec"
+      ],
+      "folderSourcePath": "imports/briefing-data-detail-2026-09-17.txt + show-crew-az631-17sep26-mia.txt",
+      "aiBriefing": "### 1) Overview volo\n- **Volo:** AZ 631  \n- **Data:** 17 settembre 2026  \n- **Rotta:** MIA - FCO  \n- **Marche:** EIHPB  \n- **ETD locale:** 16:30 (Briefing Data)  \n- **ETD UTC (Show Crew):** 20:30  \n- **Arrivo FCO:** 08:40+1 locale  \n- **Block:** 10:10  \n\n### 2) Fuel e tempo\n- Tabella fuel Lido (TRIP/PLNTOF/TAXI/BLOCK/TCAP) non ancora nel pacchetto sync per AZ631.  \n- Regola Block Fuel quando la tabella è presente: **BLOCK = PLNTOF + TAXI** (linea BLOCK stampata vuota → non inventare).  \n\n### 3) MEL / deferred\n- Elenco MEL Lido non ancora nel pacchetto sync per AZ631 — verificare cartella Lido a bordo / quando pubblicata.  \n\n### 4) Note operative\n- Equipaggio e IFR slots da Briefing Data 17Sep26-1519.  \n- Aereo: EIHPB (339).  \n- C/O FCO previsto 09:25.  \n\nBuon volo.",
+      "sourceNote": "Piano operativo AZ631 da Briefing/Show Crew nel sync auto on-open. Tabella fuel/MEL Lido completa si unisce quando il file imports/lido-crewbriefing-az631 è pubblicato."
     }
   ],
   "monthFooterFlightTimeMin": {
@@ -3780,6 +3817,6 @@
     "showcrew": "CrewLink: 7 liste (13 nomi)",
     "hotels": "CrewLink: 13 soggiorni",
     "training": "CrewLink: 15 voci training",
-    "lido": "Lido: 1 piano/i di volo (OFP sintesi)"
+    "lido": "Lido OFP auto: 2 piano/i (AZ630, AZ631)"
   }
 }
