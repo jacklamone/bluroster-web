@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-09-17T15:23:01.927Z",
+  "syncedAt": "2026-09-17T15:53:04.718Z",
   "source": "crewlink",
   "crewId": "IT410700",
   "pilot": {
@@ -15,7 +15,7 @@
     "pilotId": "pilot-giacomo-conti",
     "provider": "crewlink",
     "externalUserLabel": "IT410700 CONTI, GIACOMO",
-    "lastSyncAt": "2026-09-17T15:23:01.927Z"
+    "lastSyncAt": "2026-09-17T15:53:04.718Z"
   },
   "periods": [
     {
@@ -3650,6 +3650,47 @@
       "expiresOn": "2028-05-31"
     }
   ],
+  "flightPlans": [
+    {
+      "id": "lido-ofp-az630-2026-09-15",
+      "dutyEventId": "evt-2026-09-15-az630-1",
+      "flightNumber": "AZ630",
+      "callsign": "ITY630",
+      "date": "2026-09-15",
+      "route": "FCO-MIA",
+      "departureAirport": "FCO",
+      "arrivalAirport": "MIA",
+      "routeIcao": "LIRF-KMIA",
+      "registration": "EITYD",
+      "ofpVersion": "19/0/1",
+      "etd": "08:35",
+      "ctot": "0856",
+      "tripFuelKg": 57435,
+      "tripTime": "10.24",
+      "altn": "KFLL 2675 / 00.30",
+      "altnIcao": "KFLL",
+      "altnFuelKg": 2675,
+      "altnTime": "00.30",
+      "melSummary": [
+        "GPS #1 INOP (34-50-08D)",
+        "Electrical clock indicator INOP (31-20-01A)",
+        "SD display unit blank (31-63-01CC)",
+        "CSDSS INOP (23-72-01A)",
+        "APU INOP (49-10-01A)",
+        "A/THR panel integral LT INOP (33-12-01A)",
+        "EXT/CM2 rain repellent INOP (30-45-03A)",
+        "Tire press ind RH nose wheel INOP (32-07-07A)",
+        "Sun visors (25-99-04A)",
+        "LH NLG wheel tire pressure indicator INOP (32-07-07A)",
+        "Aft cargo ELS INOP — move ULD manually (25-50-09B)"
+      ],
+      "nextLegNote": "AZ631 MIA-FCO (15Sep ETD 23:45E, stesso aereo EITYD su next leg note OFP)",
+      "source": "lido",
+      "rawExcerpt": "ITY 630/15Sep26/LIRF-KMIA Reg:EITYD OFP:19/0/1 · ETD 08:35 · CTOT 0856 · TRIP 57435/10.24 · ALTN KFLL 2675/00.30 · MEL APU INOP, GPS#1 INOP · Next AZ631 MIA-FCO · Volo sensibile PNS / security search",
+      "aiBriefing": "### 1) Overview volo\n- **Volo:** AZ 630  \n- **Data:** 15 settembre 2026  \n- **Rotta:** FCO - MIA  \n- **Marche:** EITYD  \n- **Versione OFP:** 19/0/1  \n- **ETD:** 08:35  \n- **CTOT:** 08:56  \n\n### 2) Fuel e tempo\n- **TRIP:** 57,435 kg  \n- **ALTN:** 2,675 kg (KFLL)  \n- **FINRES:** 2,261 kg  \n- **EXTRA WX:** 2,316 kg  \n\n### 3) MEL / deferred rilevanti per l'operazione\n- **GPS #1 inoperativo** (MEL 34-50-08D)  \n- **Orologio elettrico inoperativo** (MEL 31-20-01A)  \n- **Unità di visualizzazione SD - blank** (MEL 31-63-01CC)  \n- **CSDSS inoperativo** (MEL 23-72-01A)  \n- **APU inoperativo** (MEL 49-10-01A)  \n- **Indicatore di pressione pneumatici inoperativo** (MEL 32-07-07A)  \n\n### 4) Note operative\n- **Sicurezza:** Volo soggetto a security search, considerato sensibile ai sensi del PNS.  \n- **Prossimo volo:** AZ 631, MIA - FCO, partenza prevista alle 23:45E (come da next leg OFP AZ00631/15).  \n- **Avvisi:** Si raccomanda di prestare attenzione alle condizioni meteorologiche in rotta e a destinazione. Si segnala una moderata turbolenza prevista sopra FL400 e la presenza di cumulonembi occasionali fino a FL470.  \n- **ETOPS:** Volo ETOPS 180 minuti.  \n- **Raccomandazioni NAT:** Utilizzare SLOP in spazio aereo NAT, e inviare RCL 90–30 minuti prima dell'ingresso nell'oceano.  \n\nAssicuratevi di controllare tutti i sistemi e di seguire le procedure standard prima del decollo. Buon volo.",
+      "sourceNote": "Riepilogo da Lido Crew Briefing OFP (documento confidenziale). Solo sintesi in app."
+    }
+  ],
   "monthFooterFlightTimeMin": {
     "2026-09": 3889,
     "2026-10": 3085
@@ -3659,6 +3700,7 @@
     "briefing": "CrewLink: 1 briefing (check-in, marche, hotel)",
     "showcrew": "CrewLink: 7 liste (13 nomi)",
     "hotels": "CrewLink: 13 soggiorni",
-    "training": "CrewLink: 15 voci training"
+    "training": "CrewLink: 15 voci training",
+    "lido": "Lido: 1 piano/i di volo (OFP sintesi)"
   }
 }
