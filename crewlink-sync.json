@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-09-17T14:50:57.354Z",
+  "syncedAt": "2026-09-17T15:23:01.927Z",
   "source": "crewlink",
   "crewId": "IT410700",
   "pilot": {
@@ -15,7 +15,7 @@
     "pilotId": "pilot-giacomo-conti",
     "provider": "crewlink",
     "externalUserLabel": "IT410700 CONTI, GIACOMO",
-    "lastSyncAt": "2026-09-17T14:50:57.354Z"
+    "lastSyncAt": "2026-09-17T15:23:01.927Z"
   },
   "periods": [
     {
@@ -2398,7 +2398,7 @@
       "id": "briefing-2026-09-15-az630",
       "gironeStartEventId": "evt-2026-09-15-az630-1",
       "pilotCrewCode": "IT410700",
-      "printedAt": "2026-09-13T07:04:00Z",
+      "printedAt": "2026-09-17T15:19:00Z",
       "checkInLocal": "08:35",
       "checkInUtcKey": "202609150635",
       "checkInState": "Checked in",
@@ -2406,14 +2406,14 @@
         {
           "date": "2026-09-15",
           "flightNumber": "AZ630",
-          "callsign": "AZ630",
+          "callsign": "ITY630",
           "departureAirport": "FCO",
           "arrivalAirport": "MIA",
-          "depLocal": "1035",
-          "arrLocal": "1600",
-          "blockTime": "11:25",
-          "equipment": "339/EITYC",
-          "registration": "EITYC",
+          "depLocal": "1056",
+          "arrLocal": "1554",
+          "blockTime": "10:58",
+          "equipment": "339/EITYD",
+          "registration": "EITYD",
           "aircraftType": "339"
         },
         {
@@ -2425,8 +2425,8 @@
           "depLocal": "1630",
           "arrLocal": "0840",
           "blockTime": "10:10",
-          "equipment": "339/EITYD",
-          "registration": "EITYD",
+          "equipment": "339/EIHPB",
+          "registration": "EIHPB",
           "aircraftType": "339"
         }
       ],
@@ -2435,7 +2435,7 @@
           "date": "2026-09-15",
           "checkInLocal": "0835",
           "layoverAirport": "MIA",
-          "blockTime": "11:25",
+          "blockTime": "10:58",
           "groundTime": "00:00",
           "hotelName": "THE GOODTIME HOTEL",
           "hotelPhone": "786-687-0234"
@@ -2444,7 +2444,7 @@
           "date": "2026-09-16",
           "layoverAirport": "MIA",
           "blockTime": "00:00",
-          "groundTime": "48:30",
+          "groundTime": "48:36",
           "hotelName": "THE GOODTIME HOTEL",
           "hotelPhone": "786-687-0234"
         },
@@ -2468,9 +2468,9 @@
       },
       "tafb": "72:50",
       "restTime": "68:35",
-      "totalBlock": "21:35",
-      "dutyTime": "26:20",
-      "sourceNote": "CrewLink Briefing Data · Self Check-In C/I 15Sep 0835 (0635 UTC) · FCO AZ630 · state Checked in (list 17Sep26)"
+      "totalBlock": "21:08",
+      "dutyTime": "26:14",
+      "sourceNote": "CrewLink Briefing Data printed 17Sep26-1519 · Self Check-In C/I 15Sep 0835 (0635 UTC) · FCO AZ630 · Aircraft EITYD / EIHPB · state Checked in"
     }
   ],
   "showCrew": [
