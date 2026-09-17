@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-09-17T14:48:09.058Z",
+  "syncedAt": "2026-09-17T14:50:57.354Z",
   "source": "crewlink",
   "crewId": "IT410700",
   "pilot": {
@@ -15,7 +15,7 @@
     "pilotId": "pilot-giacomo-conti",
     "provider": "crewlink",
     "externalUserLabel": "IT410700 CONTI, GIACOMO",
-    "lastSyncAt": "2026-09-17T14:48:09.058Z"
+    "lastSyncAt": "2026-09-17T14:50:57.354Z"
   },
   "periods": [
     {
@@ -2401,7 +2401,7 @@
       "printedAt": "2026-09-13T07:04:00Z",
       "checkInLocal": "08:35",
       "checkInUtcKey": "202609150635",
-      "checkInState": "Not checked in",
+      "checkInState": "Checked in",
       "legs": [
         {
           "date": "2026-09-15",
@@ -2470,7 +2470,7 @@
       "restTime": "68:35",
       "totalBlock": "21:35",
       "dutyTime": "26:20",
-      "sourceNote": "CrewLink Briefing Data · Self Check-In C/I 15Sep 0835 (0635 UTC) · FCO AZ630"
+      "sourceNote": "CrewLink Briefing Data · Self Check-In C/I 15Sep 0835 (0635 UTC) · FCO AZ630 · state Checked in (list 17Sep26)"
     }
   ],
   "showCrew": [
@@ -2733,6 +2733,656 @@
         }
       ],
       "sourceNote": "CrewLink Show Crew · AZ 631 17Sep26 MIA 2030 0640 FCO (times UTC)"
+    },
+    {
+      "id": "showcrew-2026-10-12-az640",
+      "gironeStartEventId": "evt-2026-10-12-az640-1",
+      "flightNumber": "AZ640",
+      "date": "2026-10-12",
+      "departureAirport": "FCO",
+      "arrivalAirport": "SFO",
+      "depUtc": "0710",
+      "arrUtc": "2015",
+      "members": [
+        {
+          "crewCode": "IT401210",
+          "rank": "CP",
+          "lastName": "VALCASTELLI",
+          "firstName": "MARCO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "VALCASTELLI, MARCO"
+        },
+        {
+          "crewCode": "IT404950",
+          "rank": "FO",
+          "lastName": "GUAGLIUMI",
+          "firstName": "EMILIANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "GUAGLIUMI, EMILIANO"
+        },
+        {
+          "crewCode": "IT410700",
+          "rank": "FO",
+          "lastName": "CONTI",
+          "firstName": "GIACOMO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CONTI, GIACOMO"
+        },
+        {
+          "crewCode": "IT607780",
+          "rank": "PU",
+          "lastName": "DE SANTIS",
+          "firstName": "LAURA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DE SANTIS, LAURA"
+        },
+        {
+          "crewCode": "IT601930",
+          "rank": "SE",
+          "lastName": "NENCIONI",
+          "firstName": "FABRIZIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "NENCIONI, FABRIZIO"
+        },
+        {
+          "crewCode": "IT601390",
+          "rank": "ST",
+          "lastName": "GALLO",
+          "firstName": "ELISABETTA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "GALLO, ELISABETTA"
+        },
+        {
+          "crewCode": "IT601570",
+          "rank": "ST",
+          "lastName": "INFANTE",
+          "firstName": "MARIA GRAZIA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "INFANTE, MARIA GRAZIA"
+        },
+        {
+          "crewCode": "IT614780",
+          "rank": "ST",
+          "lastName": "CIALANI",
+          "firstName": "PATRICIA ARGENTINA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CIALANI, PATRICIA ARGENTINA"
+        },
+        {
+          "crewCode": "IT620140",
+          "rank": "ST",
+          "lastName": "RICCI",
+          "firstName": "LUCA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "RICCI, LUCA"
+        },
+        {
+          "crewCode": "IT621000",
+          "rank": "ST",
+          "lastName": "DI GIUSEPPE",
+          "firstName": "MARCELLO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DI GIUSEPPE, MARCELLO"
+        },
+        {
+          "crewCode": "IT629800",
+          "rank": "ST",
+          "lastName": "TOMA",
+          "firstName": "EMANUELE",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "TOMA, EMANUELE"
+        },
+        {
+          "crewCode": "IT635910",
+          "rank": "ST",
+          "lastName": "PETRUZZELLA",
+          "firstName": "VALERIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "PETRUZZELLA, VALERIO"
+        },
+        {
+          "crewCode": "IT637020",
+          "rank": "ST",
+          "lastName": "FRASCIANA",
+          "firstName": "FABIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "FRASCIANA, FABIO"
+        }
+      ],
+      "sourceNote": "CrewLink Show Crew · AZ 640 12Oct26 FCO 0710 2015 SFO (times UTC)"
+    },
+    {
+      "id": "showcrew-2026-10-14-az641",
+      "gironeStartEventId": "evt-2026-10-12-az640-1",
+      "flightNumber": "AZ641",
+      "date": "2026-10-14",
+      "departureAirport": "SFO",
+      "arrivalAirport": "FCO",
+      "depUtc": "2215",
+      "arrUtc": "1015",
+      "members": [
+        {
+          "crewCode": "IT401210",
+          "rank": "CP",
+          "lastName": "VALCASTELLI",
+          "firstName": "MARCO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "VALCASTELLI, MARCO"
+        },
+        {
+          "crewCode": "IT404950",
+          "rank": "FO",
+          "lastName": "GUAGLIUMI",
+          "firstName": "EMILIANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "GUAGLIUMI, EMILIANO"
+        },
+        {
+          "crewCode": "IT410700",
+          "rank": "FO",
+          "lastName": "CONTI",
+          "firstName": "GIACOMO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CONTI, GIACOMO"
+        },
+        {
+          "crewCode": "IT607780",
+          "rank": "PU",
+          "lastName": "DE SANTIS",
+          "firstName": "LAURA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DE SANTIS, LAURA"
+        },
+        {
+          "crewCode": "IT601930",
+          "rank": "SE",
+          "lastName": "NENCIONI",
+          "firstName": "FABRIZIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "NENCIONI, FABRIZIO"
+        },
+        {
+          "crewCode": "IT601390",
+          "rank": "ST",
+          "lastName": "GALLO",
+          "firstName": "ELISABETTA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "GALLO, ELISABETTA"
+        },
+        {
+          "crewCode": "IT601570",
+          "rank": "ST",
+          "lastName": "INFANTE",
+          "firstName": "MARIA GRAZIA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "INFANTE, MARIA GRAZIA"
+        },
+        {
+          "crewCode": "IT614780",
+          "rank": "ST",
+          "lastName": "CIALANI",
+          "firstName": "PATRICIA ARGENTINA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CIALANI, PATRICIA ARGENTINA"
+        },
+        {
+          "crewCode": "IT620140",
+          "rank": "ST",
+          "lastName": "RICCI",
+          "firstName": "LUCA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "RICCI, LUCA"
+        },
+        {
+          "crewCode": "IT621000",
+          "rank": "ST",
+          "lastName": "DI GIUSEPPE",
+          "firstName": "MARCELLO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DI GIUSEPPE, MARCELLO"
+        },
+        {
+          "crewCode": "IT629800",
+          "rank": "ST",
+          "lastName": "TOMA",
+          "firstName": "EMANUELE",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "TOMA, EMANUELE"
+        },
+        {
+          "crewCode": "IT635910",
+          "rank": "ST",
+          "lastName": "PETRUZZELLA",
+          "firstName": "VALERIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "PETRUZZELLA, VALERIO"
+        },
+        {
+          "crewCode": "IT637020",
+          "rank": "ST",
+          "lastName": "FRASCIANA",
+          "firstName": "FABIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "FRASCIANA, FABIO"
+        }
+      ],
+      "sourceNote": "CrewLink Show Crew · AZ 641 14Oct26 SFO 2215 1015 FCO (times UTC)"
+    },
+    {
+      "id": "showcrew-2026-10-18-az614",
+      "gironeStartEventId": "evt-2026-10-18-az614-3",
+      "flightNumber": "AZ614",
+      "date": "2026-10-18",
+      "departureAirport": "FCO",
+      "arrivalAirport": "BOS",
+      "depUtc": "0825",
+      "arrUtc": "1740",
+      "members": [
+        {
+          "crewCode": "IT406990",
+          "rank": "CP",
+          "lastName": "SANZ SKOLMEN",
+          "firstName": "MIGUEL ANGEL",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "SANZ SKOLMEN, MIGUEL ANGEL"
+        },
+        {
+          "crewCode": "IT410700",
+          "rank": "FO",
+          "lastName": "CONTI",
+          "firstName": "GIACOMO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CONTI, GIACOMO"
+        },
+        {
+          "crewCode": "IT400850",
+          "rank": "CK",
+          "lastName": "MIGANI",
+          "firstName": "UGO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "MIGANI, UGO"
+        },
+        {
+          "crewCode": "IT606130",
+          "rank": "PU",
+          "lastName": "LILLI",
+          "firstName": "ALESSANDRA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "LILLI, ALESSANDRA"
+        },
+        {
+          "crewCode": "IT606480",
+          "rank": "SE",
+          "lastName": "CIVITA",
+          "firstName": "IRENE",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CIVITA, IRENE"
+        },
+        {
+          "crewCode": "IT606300",
+          "rank": "ST",
+          "lastName": "DI STEFANO",
+          "firstName": "STEFANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DI STEFANO, STEFANO"
+        },
+        {
+          "crewCode": "IT608340",
+          "rank": "ST",
+          "lastName": "RENNA",
+          "firstName": "GESSICA ANNA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "RENNA, GESSICA ANNA"
+        },
+        {
+          "crewCode": "IT611320",
+          "rank": "ST",
+          "lastName": "DE SANCTIS",
+          "firstName": "EMILIANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DE SANCTIS, EMILIANO"
+        },
+        {
+          "crewCode": "IT613450",
+          "rank": "ST",
+          "lastName": "RICCO",
+          "firstName": "BARBARA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "RICCO, BARBARA"
+        },
+        {
+          "crewCode": "IT614710",
+          "rank": "ST",
+          "lastName": "MONTANARI",
+          "firstName": "MAURA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "MONTANARI, MAURA"
+        },
+        {
+          "crewCode": "IT627890",
+          "rank": "ST",
+          "lastName": "TRIMELITI",
+          "firstName": "TIZIANA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "TRIMELITI, TIZIANA"
+        },
+        {
+          "crewCode": "IT633680",
+          "rank": "ST",
+          "lastName": "CORTINI",
+          "firstName": "ALESSANDRA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CORTINI, ALESSANDRA"
+        },
+        {
+          "crewCode": "IT633780",
+          "rank": "ST",
+          "lastName": "FRANZESE",
+          "firstName": "SOSSIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "FRANZESE, SOSSIO"
+        }
+      ],
+      "sourceNote": "CrewLink Show Crew · AZ 614 18Oct26 FCO 0825 1740 BOS (times UTC)"
+    },
+    {
+      "id": "showcrew-2026-10-19-az615",
+      "gironeStartEventId": "evt-2026-10-18-az614-3",
+      "flightNumber": "AZ615",
+      "date": "2026-10-19",
+      "departureAirport": "BOS",
+      "arrivalAirport": "FCO",
+      "depUtc": "2105",
+      "arrUtc": "0505",
+      "members": [
+        {
+          "crewCode": "IT406990",
+          "rank": "CP",
+          "lastName": "SANZ SKOLMEN",
+          "firstName": "MIGUEL ANGEL",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "SANZ SKOLMEN, MIGUEL ANGEL"
+        },
+        {
+          "crewCode": "IT410700",
+          "rank": "FO",
+          "lastName": "CONTI",
+          "firstName": "GIACOMO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CONTI, GIACOMO"
+        },
+        {
+          "crewCode": "IT400850",
+          "rank": "CK",
+          "lastName": "MIGANI",
+          "firstName": "UGO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "MIGANI, UGO"
+        },
+        {
+          "crewCode": "IT606130",
+          "rank": "PU",
+          "lastName": "LILLI",
+          "firstName": "ALESSANDRA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "LILLI, ALESSANDRA"
+        },
+        {
+          "crewCode": "IT606480",
+          "rank": "SE",
+          "lastName": "CIVITA",
+          "firstName": "IRENE",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CIVITA, IRENE"
+        },
+        {
+          "crewCode": "IT606300",
+          "rank": "ST",
+          "lastName": "DI STEFANO",
+          "firstName": "STEFANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DI STEFANO, STEFANO"
+        },
+        {
+          "crewCode": "IT608340",
+          "rank": "ST",
+          "lastName": "RENNA",
+          "firstName": "GESSICA ANNA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "RENNA, GESSICA ANNA"
+        },
+        {
+          "crewCode": "IT611320",
+          "rank": "ST",
+          "lastName": "DE SANCTIS",
+          "firstName": "EMILIANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DE SANCTIS, EMILIANO"
+        },
+        {
+          "crewCode": "IT613450",
+          "rank": "ST",
+          "lastName": "RICCO",
+          "firstName": "BARBARA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "RICCO, BARBARA"
+        },
+        {
+          "crewCode": "IT614710",
+          "rank": "ST",
+          "lastName": "MONTANARI",
+          "firstName": "MAURA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "MONTANARI, MAURA"
+        },
+        {
+          "crewCode": "IT627890",
+          "rank": "ST",
+          "lastName": "TRIMELITI",
+          "firstName": "TIZIANA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "TRIMELITI, TIZIANA"
+        },
+        {
+          "crewCode": "IT633680",
+          "rank": "ST",
+          "lastName": "CORTINI",
+          "firstName": "ALESSANDRA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CORTINI, ALESSANDRA"
+        },
+        {
+          "crewCode": "IT633780",
+          "rank": "ST",
+          "lastName": "FRANZESE",
+          "firstName": "SOSSIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "FRANZESE, SOSSIO"
+        }
+      ],
+      "sourceNote": "CrewLink Show Crew · AZ 615 19Oct26 BOS 2105 0505 FCO (times UTC)"
+    },
+    {
+      "id": "showcrew-2026-10-31-az610",
+      "gironeStartEventId": "evt-2026-10-31-az610-1",
+      "flightNumber": "AZ610",
+      "date": "2026-10-31",
+      "departureAirport": "FCO",
+      "arrivalAirport": "JFK",
+      "depUtc": "1355",
+      "arrUtc": "2355",
+      "members": [
+        {
+          "crewCode": "IT403280",
+          "rank": "CP",
+          "lastName": "PARCHITELLI",
+          "firstName": "FLAVIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "PARCHITELLI, FLAVIO"
+        },
+        {
+          "crewCode": "IT401510",
+          "rank": "FO",
+          "lastName": "CAITERZI",
+          "firstName": "EMANUELA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CAITERZI, EMANUELA"
+        },
+        {
+          "crewCode": "IT410700",
+          "rank": "FO",
+          "lastName": "CONTI",
+          "firstName": "GIACOMO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CONTI, GIACOMO"
+        },
+        {
+          "crewCode": "IT603290",
+          "rank": "PU",
+          "lastName": "PIZZOCARO",
+          "firstName": "PAOLO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "PIZZOCARO, PAOLO"
+        },
+        {
+          "crewCode": "IT601610",
+          "rank": "SE",
+          "lastName": "LAURI",
+          "firstName": "MICHELA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "LAURI, MICHELA"
+        },
+        {
+          "crewCode": "IT600180",
+          "rank": "ST",
+          "lastName": "ARANCIONI",
+          "firstName": "FRANCESCO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "ARANCIONI, FRANCESCO"
+        },
+        {
+          "crewCode": "IT604830",
+          "rank": "ST",
+          "lastName": "VITULANO",
+          "firstName": "MASSIMILIANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "VITULANO, MASSIMILIANO"
+        },
+        {
+          "crewCode": "IT610240",
+          "rank": "ST",
+          "lastName": "CAVALIERE",
+          "firstName": "ORNELLA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "CAVALIERE, ORNELLA"
+        },
+        {
+          "crewCode": "IT612900",
+          "rank": "ST",
+          "lastName": "BALDAZZI",
+          "firstName": "MAURIZIO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "BALDAZZI, MAURIZIO"
+        },
+        {
+          "crewCode": "IT613200",
+          "rank": "ST",
+          "lastName": "VAN BERKESTEIJN",
+          "firstName": "CORNELIA MARIA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "VAN BERKESTEIJN, CORNELIA MARIA"
+        },
+        {
+          "crewCode": "IT617750",
+          "rank": "ST",
+          "lastName": "DELLA MELINA",
+          "firstName": "MICAELA",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "DELLA MELINA, MICAELA"
+        },
+        {
+          "crewCode": "IT619460",
+          "rank": "ST",
+          "lastName": "COLOMBANI",
+          "firstName": "SIMONE",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "COLOMBANI, SIMONE"
+        },
+        {
+          "crewCode": "IT628530",
+          "rank": "ST",
+          "lastName": "MANCINI",
+          "firstName": "MASSIMILIANO",
+          "homebase": "ROM",
+          "seniority": 0,
+          "displayName": "MANCINI, MASSIMILIANO"
+        }
+      ],
+      "sourceNote": "CrewLink Show Crew · AZ 610 31Oct26 FCO 1355 2355 JFK (times UTC)"
     }
   ],
   "hotels": [
@@ -3007,7 +3657,7 @@
   "modules": {
     "history": "CrewLink: 143 eventi · mesi 2026-06, 2026-07, 2026-08, 2026-09, 2026-10",
     "briefing": "CrewLink: 1 briefing (check-in, marche, hotel)",
-    "showcrew": "CrewLink: 2 liste (13 nomi)",
+    "showcrew": "CrewLink: 7 liste (13 nomi)",
     "hotels": "CrewLink: 13 soggiorni",
     "training": "CrewLink: 15 voci training"
   }
