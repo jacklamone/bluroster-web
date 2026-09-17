@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-09-17T16:22:55.566Z",
+  "syncedAt": "2026-09-17T16:30:02.967Z",
   "source": "crewlink",
   "crewId": "IT410700",
   "pilot": {
@@ -15,7 +15,7 @@
     "pilotId": "pilot-giacomo-conti",
     "provider": "crewlink",
     "externalUserLabel": "IT410700 CONTI, GIACOMO",
-    "lastSyncAt": "2026-09-17T16:22:55.566Z"
+    "lastSyncAt": "2026-09-17T16:30:02.967Z"
   },
   "periods": [
     {
@@ -3724,7 +3724,7 @@
       "altnFuelKg": 2675,
       "altnTime": "00.30",
       "taxiFuelKg": 588,
-      "blockFuelKg": null,
+      "blockFuelKg": 66998,
       "finresKg": 2261,
       "tcapKg": 110576,
       "contFuelKg": 1723,
@@ -3766,8 +3766,8 @@
         "notam_bulletin_tail"
       ],
       "folderSourcePath": "imports/lido-crewbriefing-az630-2026-09-15.txt",
-      "aiBriefing": "### 1) Overview volo\n- **Volo:** AZ 630  \n- **Data:** 15 settembre 2026  \n- **Rotta:** FCO - MIA  \n- **Marche:** EITYD  \n- **Versione OFP:** 19/0/1  \n- **ETD:** 08:35  \n- **CTOT:** 08:56  \n\n### 2) Fuel e tempo (tabella OFP)\n- **TRIP:** 57,435 kg / 10.24  \n- **CONT 3%:** 1,723 kg  \n- **ALTN:** 2,675 kg (KFLL) / 00.30  \n- **FINRES:** 2,261 kg  \n- **EXTRA WX:** 2,316 kg  \n- **PLNTOF:** 66,410 kg  \n- **TAXI:** 588 kg  \n- **BLOCK:** ...... (campo vuoto / da compilare sul package — non stampato un valore)  \n- **TCAP:** 110,576 kg  \n\n### 3) MEL / deferred rilevanti per l'operazione\n- **GPS #1 inoperativo** (MEL 34-50-08D)  \n- **Orologio elettrico inoperativo** (MEL 31-20-01A)  \n- **Unità di visualizzazione SD - blank** (MEL 31-63-01CC)  \n- **CSDSS inoperativo** (MEL 23-72-01A)  \n- **APU inoperativo** (MEL 49-10-01A)  \n- **Indicatore di pressione pneumatici inoperativo** (MEL 32-07-07A)  \n\n### 4) Note operative\n- **Sicurezza:** Volo soggetto a security search, considerato sensibile ai sensi del PNS.  \n- **Prossimo volo:** AZ 631, MIA - FCO, partenza prevista alle 23:45E (come da next leg OFP AZ00631/15).  \n- **Avvisi:** Si raccomanda di prestare attenzione alle condizioni meteorologiche in rotta e a destinazione. Si segnala una moderata turbolenza prevista sopra FL400 e la presenza di cumulonembi occasionali fino a FL470.  \n- **ETOPS:** Volo ETOPS 180 minuti.  \n- **Raccomandazioni NAT:** Utilizzare SLOP in spazio aereo NAT, e inviare RCL 90–30 minuti prima dell'ingresso nell'oceano.  \n\nAssicuratevi di controllare tutti i sistemi e di seguire le procedure standard prima del decollo. Buon volo.",
-      "sourceNote": "Riepilogo da Lido Crew Briefing OFP (documento confidenziale). folderExcerpt per Briefing AI; UI mostra solo sintesi."
+      "aiBriefing": "### 1) Overview volo\n- **Volo:** AZ 630  \n- **Data:** 15 settembre 2026  \n- **Rotta:** FCO - MIA  \n- **Marche:** EITYD  \n- **Versione OFP:** 19/0/1  \n- **ETD:** 08:35  \n- **CTOT:** 08:56  \n\n### 2) Fuel e tempo (tabella OFP)\n- **TRIP:** 57,435 kg / 10.24  \n- **CONT 3%:** 1,723 kg  \n- **ALTN:** 2,675 kg (KFLL) / 00.30  \n- **FINRES:** 2,261 kg  \n- **EXTRA WX:** 2,316 kg  \n- **PLNTOF:** 66,410 kg  \n- **TAXI:** 588 kg  \n- **BLOCK:** 66,998 kg (= PLNTOF 66,410 + TAXI 588; linea BLOCK stampata vuota → regola Block Fuel)  \n- **TCAP:** 110,576 kg  \n\n### 3) MEL / deferred rilevanti per l'operazione\n- **GPS #1 inoperativo** (MEL 34-50-08D)  \n- **Orologio elettrico inoperativo** (MEL 31-20-01A)  \n- **Unità di visualizzazione SD - blank** (MEL 31-63-01CC)  \n- **CSDSS inoperativo** (MEL 23-72-01A)  \n- **APU inoperativo** (MEL 49-10-01A)  \n- **Indicatore di pressione pneumatici inoperativo** (MEL 32-07-07A)  \n\n### 4) Note operative\n- **Sicurezza:** Volo soggetto a security search, considerato sensibile ai sensi del PNS.  \n- **Prossimo volo:** AZ 631, MIA - FCO, partenza prevista alle 23:45E (come da next leg OFP AZ00631/15).  \n- **Avvisi:** Si raccomanda di prestare attenzione alle condizioni meteorologiche in rotta e a destinazione. Si segnala una moderata turbolenza prevista sopra FL400 e la presenza di cumulonembi occasionali fino a FL470.  \n- **ETOPS:** Volo ETOPS 180 minuti.  \n- **Raccomandazioni NAT:** Utilizzare SLOP in spazio aereo NAT, e inviare RCL 90–30 minuti prima dell'ingresso nell'oceano.  \n\nAssicuratevi di controllare tutti i sistemi e di seguire le procedure standard prima del decollo. Buon volo.",
+      "sourceNote": "Riepilogo da Lido Crew Briefing OFP (documento confidenziale). Full folder bundled for Briefing AI retrieval; UI mostra solo sintesi."
     }
   ],
   "monthFooterFlightTimeMin": {
