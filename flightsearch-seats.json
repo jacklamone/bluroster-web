@@ -1,35 +1,63 @@
 {
   "version": 1,
-  "syncedAt": "2026-09-18T04:13:04.060Z",
-  "source": "flightsearch",
+  "syncedAt": "2026-09-18T04:20:20Z",
+  "source": "flightsearch-cki",
   "seats": [
     {
-      "id": "fs-crb-az2013-2026-09-17",
+      "id": "fs-az2013-2026-09-18-LIN-FCO",
       "flightNumber": "AZ2013",
-      "date": "2026-09-17",
+      "date": "2026-09-18",
       "from": "LIN",
       "to": "FCO",
-      "pads": 6,
-      "bus": -1,
-      "eco": 1,
+      "bus": 0,
+      "eco": 28,
       "source": "flightsearch",
-      "syncedAt": "2026-09-17T22:00:00.000Z",
-      "detailUrl": "https://flightsearch.app/#/f/LIN/FCO/AZ2013/2026-09-17",
-      "kind": "crb"
+      "syncedAt": "2026-09-18T04:20:20Z",
+      "detailUrl": "https://flightsearch.app/#/f/LIN/FCO/AZ2013/2026-09-18",
+      "kind": "crb",
+      "staffStandby": 1
     },
     {
-      "id": "fs-crb-az2036-2026-09-18",
+      "id": "fs-az2013-2026-09-19-LIN-FCO",
+      "flightNumber": "AZ2013",
+      "date": "2026-09-19",
+      "from": "LIN",
+      "to": "FCO",
+      "bus": 3,
+      "eco": 84,
+      "source": "flightsearch",
+      "syncedAt": "2026-09-18T04:20:20Z",
+      "detailUrl": "https://flightsearch.app/#/f/LIN/FCO/AZ2013/2026-09-19",
+      "kind": "crb",
+      "staffStandby": 1
+    },
+    {
+      "id": "fs-az2036-2026-09-18-FCO-LIN",
       "flightNumber": "AZ2036",
       "date": "2026-09-18",
       "from": "FCO",
       "to": "LIN",
-      "pads": 1,
       "bus": 2,
       "eco": -6,
       "source": "flightsearch",
-      "syncedAt": "2026-09-17T22:00:00.000Z",
+      "syncedAt": "2026-09-18T04:20:20Z",
       "detailUrl": "https://flightsearch.app/#/f/FCO/LIN/AZ2036/2026-09-18",
-      "kind": "crb"
+      "kind": "crb",
+      "staffStandby": 1
+    },
+    {
+      "id": "fs-az2036-2026-09-19-FCO-LIN",
+      "flightNumber": "AZ2036",
+      "date": "2026-09-19",
+      "from": "FCO",
+      "to": "LIN",
+      "bus": 0,
+      "eco": 5,
+      "source": "flightsearch",
+      "syncedAt": "2026-09-18T04:20:20Z",
+      "detailUrl": "https://flightsearch.app/#/f/FCO/LIN/AZ2036/2026-09-19",
+      "kind": "crb",
+      "staffStandby": 0
     }
   ]
 }
