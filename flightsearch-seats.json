@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-09-18T04:20:20Z",
+  "syncedAt": "2026-09-18T04:22:48.716Z",
   "source": "flightsearch-cki",
   "seats": [
     {
@@ -9,27 +9,17 @@
       "date": "2026-09-18",
       "from": "LIN",
       "to": "FCO",
-      "bus": 0,
-      "eco": 28,
       "source": "flightsearch",
-      "syncedAt": "2026-09-18T04:20:20Z",
+      "syncedAt": "2026-09-18T04:22:48.716Z",
       "detailUrl": "https://flightsearch.app/#/f/LIN/FCO/AZ2013/2026-09-18",
       "kind": "crb",
-      "staffStandby": 1
-    },
-    {
-      "id": "fs-az2013-2026-09-19-LIN-FCO",
-      "flightNumber": "AZ2013",
-      "date": "2026-09-19",
-      "from": "LIN",
-      "to": "FCO",
-      "bus": 3,
-      "eco": 84,
-      "source": "flightsearch",
-      "syncedAt": "2026-09-18T04:20:20Z",
-      "detailUrl": "https://flightsearch.app/#/f/LIN/FCO/AZ2013/2026-09-19",
-      "kind": "crb",
-      "staffStandby": 1
+      "bus": 0,
+      "eco": 28,
+      "free": 28,
+      "booked": 144,
+      "capacity": 172,
+      "staffStandby": 1,
+      "staffWaitlist": 2
     },
     {
       "id": "fs-az2036-2026-09-18-FCO-LIN",
@@ -37,13 +27,35 @@
       "date": "2026-09-18",
       "from": "FCO",
       "to": "LIN",
-      "bus": 2,
-      "eco": -6,
       "source": "flightsearch",
-      "syncedAt": "2026-09-18T04:20:20Z",
+      "syncedAt": "2026-09-18T04:22:48.716Z",
       "detailUrl": "https://flightsearch.app/#/f/FCO/LIN/AZ2036/2026-09-18",
       "kind": "crb",
-      "staffStandby": 1
+      "bus": 2,
+      "eco": -6,
+      "free": -4,
+      "booked": 125,
+      "capacity": 121,
+      "staffStandby": 1,
+      "staffWaitlist": 1
+    },
+    {
+      "id": "fs-az2013-2026-09-19-LIN-FCO",
+      "flightNumber": "AZ2013",
+      "date": "2026-09-19",
+      "from": "LIN",
+      "to": "FCO",
+      "source": "flightsearch",
+      "syncedAt": "2026-09-18T04:22:48.716Z",
+      "detailUrl": "https://flightsearch.app/#/f/LIN/FCO/AZ2013/2026-09-19",
+      "kind": "crb",
+      "bus": 3,
+      "eco": 84,
+      "free": 87,
+      "booked": 83,
+      "capacity": 170,
+      "staffStandby": 1,
+      "staffWaitlist": 1
     },
     {
       "id": "fs-az2036-2026-09-19-FCO-LIN",
@@ -51,13 +63,17 @@
       "date": "2026-09-19",
       "from": "FCO",
       "to": "LIN",
-      "bus": 0,
-      "eco": 5,
       "source": "flightsearch",
-      "syncedAt": "2026-09-18T04:20:20Z",
+      "syncedAt": "2026-09-18T04:22:48.716Z",
       "detailUrl": "https://flightsearch.app/#/f/FCO/LIN/AZ2036/2026-09-19",
       "kind": "crb",
-      "staffStandby": 0
+      "bus": 0,
+      "eco": 5,
+      "free": 5,
+      "booked": 165,
+      "capacity": 170,
+      "staffStandby": 0,
+      "staffWaitlist": 1
     }
   ]
 }
