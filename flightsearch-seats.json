@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "syncedAt": "2026-09-18T04:13:04.060Z",
+  "source": "flightsearch",
+  "seats": [
+    {
+      "id": "fs-crb-az2013-2026-09-17",
+      "flightNumber": "AZ2013",
+      "date": "2026-09-17",
+      "from": "LIN",
+      "to": "FCO",
+      "pads": 6,
+      "bus": -1,
+      "eco": 1,
+      "source": "flightsearch",
+      "syncedAt": "2026-09-17T22:00:00.000Z",
+      "detailUrl": "https://flightsearch.app/#/f/LIN/FCO/AZ2013/2026-09-17",
+      "kind": "crb"
+    },
+    {
+      "id": "fs-crb-az2036-2026-09-18",
+      "flightNumber": "AZ2036",
+      "date": "2026-09-18",
+      "from": "FCO",
+      "to": "LIN",
+      "pads": 1,
+      "bus": 2,
+      "eco": -6,
+      "source": "flightsearch",
+      "syncedAt": "2026-09-17T22:00:00.000Z",
+      "detailUrl": "https://flightsearch.app/#/f/FCO/LIN/AZ2036/2026-09-18",
+      "kind": "crb"
+    }
+  ]
+}
