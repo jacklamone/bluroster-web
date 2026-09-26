@@ -1,0 +1,37 @@
+name: Decode brand icons
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apple-touch-icon.png.b64"
+      - "icon-192.png.b64"
+      - "icon-512.png.b64"
+      - "favicon-32.png.b64"
+      - ".github/workflows/decode-icons.yml"
+permissions:
+  contents: write
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode base64 icons to PNG
+        run: |
+          set -euo pipefail
+          for f in apple-touch-icon.png icon-192.png icon-512.png favicon-32.png; do
+            if [ -f "${f}.b64" ]; then
+              base64 -d "${f}.b64" > "$f"
+              python3 -c "from pathlib import Path; p=Path('$f'); b=p.read_bytes(); assert b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', f'{p} is not a PNG'; print(p, 'ok', len(b))"
+            fi
+          done
+      - name: Commit PNGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apple-touch-icon.png icon-192.png icon-512.png favicon-32.png || true
+          if git diff --cached --quiet; then
+            echo "no icon changes"
+          else
+            git commit -m "chore: apply BluRoster metallic brand icons"
+            git push
+          fi
