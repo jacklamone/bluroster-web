@@ -15,60 +15,50 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Decode base64 icons to PNG
+      - name: Publish known-good iOS icon
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
           import base64
-          names = ["apple-touch-icon.png", "icon-192.png", "icon-512.png", "favicon-32.png"]
-          for name in names:
-              b64p = Path(name + ".b64")
-              if not b64p.exists():
-                  print("skip", name)
-                  continue
-              raw = base64.b64decode("".join(b64p.read_text().split()))
-              assert raw[:8] == b"\x89PNG\r\n\x1a\n", f"{name} not a PNG header"
-              assert raw[-8:] == b"IEND\xaeB`\x82", f"{name} missing IEND"
-              Path(name).write_bytes(raw)
-              print(name, "ok", len(raw))
-          ati = Path("apple-touch-icon.png")
-          if ati.exists():
-              ati_v4 = Path("apple-touch-icon-180-v4.png")
-              ati_v4.write_bytes(ati.read_bytes())
-              print("wrote", ati_v4)
-          i192 = Path("icon-192.png")
-          if i192.exists():
-              v4 = Path("icon-192-v4.png")
-              v4.write_bytes(i192.read_bytes())
-              print("wrote", v4)
-          PY
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
+          # Prefer a known-good existing PNG over a possibly corrupt/placeholder b64
+          src = None
+          for candidate in ["icon-192-v3.png", "icon-192.png", "icon-512.png"]:
+              p = Path(candidate)
+              if p.exists() and p.read_bytes()[:8] == b"\x89PNG\r\n\x1a\n" and p.stat().st_size > 10000:
+                  src = p
+                  break
+          if src is None:
+              raise SystemExit("no valid source PNG found")
+          data = src.read_bytes()
+          print("source", src, len(data))
+          Path("apple-touch-icon.png").write_bytes(data)
+          Path("apple-touch-icon-180-v4.png").write_bytes(data)
+          Path("apple-touch-icon-180-v3.png").write_bytes(data)
           p = Path("index.html")
           t = p.read_text()
-          t2, n = re.subn(
-              r'<link rel="apple-touch-icon"[^>]*>',
-              '<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180-v4.png"/>',
-              t,
-              count=1,
-          )
-          if n:
-              p.write_text(t2)
-              print("patched index.html -> v4")
-          else:
-              print("no apple-touch-icon link found")
+          needle = 'rel="apple-touch-icon"'
+          if needle in t or "rel='apple-touch-icon'" in t:
+              import re
+              t2, n = re.subn(
+                  r'<link rel="apple-touch-icon"[^>]*>',
+                  '<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180-v4.png"/>',
+                  t,
+                  count=1,
+              )
+              print("patched", n)
+              if n:
+                  p.write_text(t2)
           PY
-          ls -la apple-touch-icon*.png icon-192*.png || true
+          ls -la apple-touch-icon*.png icon-192*.png
       - name: Commit PNGs and HTML patch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apple-touch-icon.png apple-touch-icon-180-v4.png icon-192.png icon-192-v4.png icon-512.png favicon-32.png index.html || true
+          git add apple-touch-icon.png apple-touch-icon-180-v4.png apple-touch-icon-180-v3.png index.html
           if git diff --cached --quiet; then
             echo "no icon changes"
           else
-            git commit -m "chore: apply valid BluRoster apple-touch-icon v4 (fix corrupt PNG)"
+            git commit -m "fix: serve valid metallic apple-touch-icon v4 (from icon-192-v3)"
             git push
           fi
