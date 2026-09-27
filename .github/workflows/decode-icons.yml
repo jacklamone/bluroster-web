@@ -3,10 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "apple-touch-icon.png.b64"
-      - "icon-192.png.b64"
-      - "icon-512.png.b64"
-      - "favicon-32.png.b64"
+      - "icon-parts/**"
       - ".github/workflows/decode-icons.yml"
 permissions:
   contents: write
@@ -15,43 +12,60 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Publish v5 iOS icon from known-good 192
+      - name: Assemble brushed-metal apple-touch-icon v6
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
+          import base64, hashlib
+          parts = sorted(Path("icon-parts").glob("apple-touch-icon.png.b64.p*"))
+          if not parts:
+              raise SystemExit("no icon-parts found")
+          b64 = "".join("".join(p.read_text().split()) for p in parts)
+          raw = base64.b64decode(b64)
+          assert raw[:8] == b"\x89PNG\r\n\x1a\n", "not a PNG"
+          assert raw[-8:] == b"IEND\xaeB`\x82", "missing IEND"
+          exp = Path("icon-parts/EXPECTED_SHA256.txt")
+          if exp.exists():
+              want = exp.read_text().strip()
+              got = hashlib.sha256(raw).hexdigest()
+              assert got == want, f"sha mismatch {got} != {want}"
+          Path("apple-touch-icon.png").write_bytes(raw)
+          Path("apple-touch-icon-precomposed.png").write_bytes(raw)
+          Path("apple-touch-icon-180-v6.png").write_bytes(raw)
+          Path("brand/v6").mkdir(parents=True, exist_ok=True)
+          Path("brand/v6/apple-touch-icon.png").write_bytes(raw)
+          print("wrote", len(raw), hashlib.sha256(raw).hexdigest())
+          PY
+          python3 - <<'PY'
+          from pathlib import Path
           import re
-          src = Path("icon-192-v3.png")
-          if not src.exists():
-              src = Path("icon-192.png")
-          data = src.read_bytes()
-          assert data[:8] == b"\x89PNG\r\n\x1a\n"
-          assert len(data) > 20000
-          print("source", src, len(data))
-          for name in ["apple-touch-icon.png", "apple-touch-icon-180-v5.png"]:
-              Path(name).write_bytes(data)
-              print("wrote", name)
+          href = "./brand/v6/apple-touch-icon.png"
           p = Path("index.html")
           t = p.read_text()
           t2, n = re.subn(
               r'<link rel="apple-touch-icon"[^>]*>',
-              '<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180-v5.png"/>',
+              f'<link rel="apple-touch-icon" sizes="180x180" href="{href}"/>',
               t,
               count=1,
           )
-          print("patched", n)
-          if n:
-              p.write_text(t2)
+          if "apple-touch-icon-precomposed" not in t2:
+              t2 = t2.replace(
+                  f'<link rel="apple-touch-icon" sizes="180x180" href="{href}"/>',
+                  f'<link rel="apple-touch-icon" sizes="180x180" href="{href}"/><link rel="apple-touch-icon-precomposed" sizes="180x180" href="./apple-touch-icon-precomposed.png"/>',
+                  1,
+              )
+          p.write_text(t2)
+          print("patched index.html", n)
           PY
-          ls -la apple-touch-icon*.png icon-192*.png
       - name: Commit PNGs and HTML patch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apple-touch-icon.png apple-touch-icon-180-v5.png index.html
+          git add apple-touch-icon.png apple-touch-icon-precomposed.png apple-touch-icon-180-v6.png brand/v6/apple-touch-icon.png index.html
           if git diff --cached --quiet; then
             echo "no icon changes"
           else
-            git commit -m "fix: apple-touch-icon v5 valid metallic PNG"
+            git commit -m "chore: apply brushed-metal apple-touch-icon v6"
             git push
           fi
