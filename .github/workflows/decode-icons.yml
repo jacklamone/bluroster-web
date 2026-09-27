@@ -21,17 +21,20 @@ jobs:
           for f in apple-touch-icon.png icon-192.png icon-512.png favicon-32.png; do
             if [ -f "${f}.b64" ]; then
               base64 -d "${f}.b64" > "$f"
-              python3 -c "from pathlib import Path; p=Path('$f'); b=p.read_bytes(); assert b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', f'{p} is not a PNG'; print(p, 'ok', len(b))"
+              python3 -c "from pathlib import Path; p=Path('$f'); b=p.read_bytes(); assert b[:8]==b'\x89PNG\r\n\x1a\n', f'{p} is not a PNG'; print(p, 'ok', len(b))"
             fi
           done
+          if [ -f apple-touch-icon.png ]; then cp apple-touch-icon.png apple-touch-icon-180-v3.png; fi
+          if [ -f icon-192.png ]; then cp icon-192.png icon-192-v3.png; fi
+          ls -la apple-touch-icon*.png icon-192*.png icon-512.png favicon-32.png || true
       - name: Commit PNGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apple-touch-icon.png icon-192.png icon-512.png favicon-32.png || true
+          git add apple-touch-icon.png apple-touch-icon-180-v3.png icon-192.png icon-192-v3.png icon-512.png favicon-32.png || true
           if git diff --cached --quiet; then
             echo "no icon changes"
           else
-            git commit -m "chore: apply BluRoster metallic brand icons"
+            git commit -m "chore: apply BluRoster metallic brand icons v3"
             git push
           fi
