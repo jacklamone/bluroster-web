@@ -18,40 +18,57 @@ jobs:
       - name: Decode base64 icons to PNG
         run: |
           set -euo pipefail
-          for f in apple-touch-icon.png icon-192.png icon-512.png favicon-32.png; do
-            if [ -f "${f}.b64" ]; then
-              base64 -d "${f}.b64" > "$f"
-              python3 -c "from pathlib import Path; p=Path('$f'); b=p.read_bytes(); assert b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', f'{p} is not a PNG'; print(p, 'ok', len(b))"
-            fi
-          done
-          if [ -f apple-touch-icon.png ]; then cp apple-touch-icon.png apple-touch-icon-180-v3.png; fi
-          if [ -f icon-192.png ]; then cp icon-192.png icon-192-v3.png; fi
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64
+          names = ["apple-touch-icon.png", "icon-192.png", "icon-512.png", "favicon-32.png"]
+          for name in names:
+              b64p = Path(name + ".b64")
+              if not b64p.exists():
+                  print("skip", name)
+                  continue
+              raw = base64.b64decode("".join(b64p.read_text().split()))
+              assert raw[:8] == b"\x89PNG\r\n\x1a\n", f"{name} not a PNG header"
+              assert raw[-8:] == b"IEND\xaeB`\x82", f"{name} missing IEND"
+              Path(name).write_bytes(raw)
+              print(name, "ok", len(raw))
+          ati = Path("apple-touch-icon.png")
+          if ati.exists():
+              ati_v4 = Path("apple-touch-icon-180-v4.png")
+              ati_v4.write_bytes(ati.read_bytes())
+              print("wrote", ati_v4)
+          i192 = Path("icon-192.png")
+          if i192.exists():
+              v4 = Path("icon-192-v4.png")
+              v4.write_bytes(i192.read_bytes())
+              print("wrote", v4)
+          PY
           python3 - <<'PY'
           from pathlib import Path
           import re
-          p = Path('index.html')
+          p = Path("index.html")
           t = p.read_text()
           t2, n = re.subn(
               r'<link rel="apple-touch-icon"[^>]*>',
-              '<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180-v3.png"/>',
+              '<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180-v4.png"/>',
               t,
               count=1,
           )
           if n:
               p.write_text(t2)
-              print('patched index.html')
+              print("patched index.html -> v4")
           else:
-              print('no apple-touch-icon link found')
+              print("no apple-touch-icon link found")
           PY
           ls -la apple-touch-icon*.png icon-192*.png || true
       - name: Commit PNGs and HTML patch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apple-touch-icon.png apple-touch-icon-180-v3.png icon-192.png icon-192-v3.png icon-512.png favicon-32.png index.html || true
+          git add apple-touch-icon.png apple-touch-icon-180-v4.png icon-192.png icon-192-v4.png icon-512.png favicon-32.png index.html || true
           if git diff --cached --quiet; then
             echo "no icon changes"
           else
-            git commit -m "chore: apply BluRoster metallic brand icons v3 + cache-bust href"
+            git commit -m "chore: apply valid BluRoster apple-touch-icon v4 (fix corrupt PNG)"
             git push
           fi
