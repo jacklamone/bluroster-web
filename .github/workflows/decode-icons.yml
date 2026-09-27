@@ -15,50 +15,43 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Publish known-good iOS icon
+      - name: Publish v5 iOS icon from known-good 192
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          import base64
-          # Prefer a known-good existing PNG over a possibly corrupt/placeholder b64
-          src = None
-          for candidate in ["icon-192-v3.png", "icon-192.png", "icon-512.png"]:
-              p = Path(candidate)
-              if p.exists() and p.read_bytes()[:8] == b"\x89PNG\r\n\x1a\n" and p.stat().st_size > 10000:
-                  src = p
-                  break
-          if src is None:
-              raise SystemExit("no valid source PNG found")
+          import re
+          src = Path("icon-192-v3.png")
+          if not src.exists():
+              src = Path("icon-192.png")
           data = src.read_bytes()
+          assert data[:8] == b"\x89PNG\r\n\x1a\n"
+          assert len(data) > 20000
           print("source", src, len(data))
-          Path("apple-touch-icon.png").write_bytes(data)
-          Path("apple-touch-icon-180-v4.png").write_bytes(data)
-          Path("apple-touch-icon-180-v3.png").write_bytes(data)
+          for name in ["apple-touch-icon.png", "apple-touch-icon-180-v5.png"]:
+              Path(name).write_bytes(data)
+              print("wrote", name)
           p = Path("index.html")
           t = p.read_text()
-          needle = 'rel="apple-touch-icon"'
-          if needle in t or "rel='apple-touch-icon'" in t:
-              import re
-              t2, n = re.subn(
-                  r'<link rel="apple-touch-icon"[^>]*>',
-                  '<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180-v4.png"/>',
-                  t,
-                  count=1,
-              )
-              print("patched", n)
-              if n:
-                  p.write_text(t2)
+          t2, n = re.subn(
+              r'<link rel="apple-touch-icon"[^>]*>',
+              '<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180-v5.png"/>',
+              t,
+              count=1,
+          )
+          print("patched", n)
+          if n:
+              p.write_text(t2)
           PY
           ls -la apple-touch-icon*.png icon-192*.png
       - name: Commit PNGs and HTML patch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apple-touch-icon.png apple-touch-icon-180-v4.png apple-touch-icon-180-v3.png index.html
+          git add apple-touch-icon.png apple-touch-icon-180-v5.png index.html
           if git diff --cached --quiet; then
             echo "no icon changes"
           else
-            git commit -m "fix: serve valid metallic apple-touch-icon v4 (from icon-192-v3)"
+            git commit -m "fix: apple-touch-icon v5 valid metallic PNG"
             git push
           fi
