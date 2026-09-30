@@ -12,14 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Assemble brushed-metal apple-touch-icon v7
+      - name: Assemble BluRoster apple-touch-icon v8
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
           import base64, hashlib, re
           full = Path("icon-parts/FULL.b64")
-          if full.exists():
+          v8 = sorted(Path("icon-parts/v8").glob("*.b64")) if Path("icon-parts/v8").exists() else []
+          if v8:
+              raw_txt = "".join(p.read_text() for p in v8)
+              print("using v8 parts", [p.name for p in v8])
+          elif full.exists():
               raw_txt = full.read_text()
               print("using FULL.b64")
           else:
@@ -36,38 +40,33 @@ jobs:
           got = hashlib.sha256(raw).hexdigest()
           Path("apple-touch-icon.png").write_bytes(raw)
           Path("apple-touch-icon-precomposed.png").write_bytes(raw)
-          Path("apple-touch-icon-180-v7.png").write_bytes(raw)
-          Path("brand/v7").mkdir(parents=True, exist_ok=True)
-          Path("brand/v7/apple-touch-icon.png").write_bytes(raw)
+          Path("apple-touch-icon-180-v8.png").write_bytes(raw)
+          Path("icon-192-v8.png").write_bytes(raw)
+          Path("brand/v8").mkdir(parents=True, exist_ok=True)
+          Path("brand/v8/apple-touch-icon.png").write_bytes(raw)
           print("wrote", len(raw), got)
           PY
           python3 - <<'PY'
           from pathlib import Path
           import re, json
-          href = "./apple-touch-icon-180-v7.png"
+          href = "./apple-touch-icon-180-v8.png"
           p = Path("index.html")
           t = p.read_text()
-          t2, n = re.subn(
-              r'<link rel="apple-touch-icon"[^>]*>',
-              f'<link rel="apple-touch-icon" sizes="180x180" href="{href}"/>',
-              t,
-              count=1,
+          t = re.sub(r'<link rel="apple-touch-icon"[^>]*>', '', t)
+          t = re.sub(r'<link rel="apple-touch-icon-precomposed"[^>]*>', '', t)
+          extra = (
+              f'<link rel="apple-touch-icon" sizes="180x180" href="{href}"/>'
+              f'<link rel="apple-touch-icon-precomposed" sizes="180x180" href="./apple-touch-icon-precomposed.png"/>'
           )
-          extra = f'<link rel="apple-touch-icon" sizes="180x180" href="{href}"/><link rel="apple-touch-icon-precomposed" sizes="180x180" href="./apple-touch-icon-precomposed.png"/>'
-          t2 = re.sub(r'<link rel="apple-touch-icon-precomposed"[^>]*>', '', t2)
-          t2 = t2.replace(
-              f'<link rel="apple-touch-icon" sizes="180x180" href="{href}"/>',
-              extra,
-              1,
-          )
-          p.write_text(t2)
-          print("patched index.html", n)
+          t = t.replace('<link rel="manifest" href="./manifest.json"/>', extra + '<link rel="manifest" href="./manifest.json"/>', 1)
+          p.write_text(t)
+          print("patched index.html")
           mf = Path("manifest.json")
           if mf.exists():
               data = json.loads(mf.read_text())
               data["icons"] = [
-                  {"src": "apple-touch-icon-180-v7.png", "sizes": "180x180", "type": "image/png", "purpose": "any"},
-                  {"src": "icon-192-v3.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+                  {"src": "apple-touch-icon-180-v8.png", "sizes": "180x180", "type": "image/png", "purpose": "any"},
+                  {"src": "icon-192-v8.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
                   {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
               ]
               mf.write_text(json.dumps(data, indent=2) + "\n")
@@ -77,10 +76,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apple-touch-icon.png apple-touch-icon-precomposed.png apple-touch-icon-180-v7.png brand/v7/apple-touch-icon.png index.html manifest.json
+          git add apple-touch-icon.png apple-touch-icon-precomposed.png apple-touch-icon-180-v8.png icon-192-v8.png brand/v8/apple-touch-icon.png index.html manifest.json
           if git diff --cached --quiet; then
             echo "no icon changes"
           else
-            git commit -m "chore: apply brushed-metal apple-touch-icon v7"
+            git commit -m "chore: apply BluRoster apple-touch-icon v8"
             git push
           fi
