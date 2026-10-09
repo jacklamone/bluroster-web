@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "syncedAt": "2026-10-06T06:49:24.798Z",
+  "syncedAt": "2026-10-09T14:57:52.385Z",
   "source": "crewlink",
   "crewId": "IT410700",
   "pilot": {
@@ -15,7 +15,7 @@
     "pilotId": "pilot-giacomo-conti",
     "provider": "crewlink",
     "externalUserLabel": "IT410700 CONTI, GIACOMO",
-    "lastSyncAt": "2026-10-06T06:49:24.798Z"
+    "lastSyncAt": "2026-10-09T14:57:52.385Z"
   },
   "periods": [
     {
@@ -298,8 +298,8 @@
       "periodId": "period-2026-06",
       "pilotId": "pilot-giacomo-conti",
       "source": "crewlink",
-      "id": "evt-2026-06-15-az769-1",
-      "date": "2026-06-15",
+      "id": "evt-2026-06-16-az769-1",
+      "date": "2026-06-16",
       "kind": "flight",
       "code": "AZ769",
       "title": "DEL → FCO",
@@ -307,14 +307,14 @@
       "departureAirport": "DEL",
       "arrivalAirport": "FCO",
       "aircraftType": "A339",
-      "startAt": "2026-06-15T03:00:00+05:30",
-      "endAt": "2026-06-15T08:10:00+02:00",
+      "startAt": "2026-06-16T03:00:00+05:30",
+      "endAt": "2026-06-16T08:10:00+02:00",
       "checkOut": true,
       "info": "AZ 769 DEL 0300 !0810 FCO 339 · C/O !0855 FCO",
       "flightTimeMin": 520,
       "dutyTimeMin": 565,
-      "sortKey": "2026-06-15-01",
-      "externalKey": "crewlink:2026-06-15:AZ769"
+      "sortKey": "2026-06-16-01",
+      "externalKey": "crewlink:2026-06-16:AZ769"
     },
     {
       "periodId": "period-2026-06",
@@ -581,8 +581,8 @@
       "periodId": "period-2026-07",
       "pilotId": "pilot-giacomo-conti",
       "source": "crewlink",
-      "id": "evt-2026-07-07-az631-1",
-      "date": "2026-07-07",
+      "id": "evt-2026-07-06-az631-1",
+      "date": "2026-07-06",
       "kind": "flight",
       "code": "AZ631",
       "title": "MIA → FCO",
@@ -590,14 +590,14 @@
       "departureAirport": "MIA",
       "arrivalAirport": "FCO",
       "aircraftType": "A339",
-      "startAt": "2026-07-07T19:45:00-04:00",
-      "endAt": "2026-07-08T11:55:00+02:00",
+      "startAt": "2026-07-06T19:45:00-04:00",
+      "endAt": "2026-07-07T11:55:00+02:00",
       "checkOut": true,
       "info": "AZ 631 MIA 1945 !1155 FCO 339 · C/O !1240 FCO",
       "flightTimeMin": 610,
       "dutyTimeMin": 655,
-      "sortKey": "2026-07-07-01",
-      "externalKey": "crewlink:2026-07-07:AZ631"
+      "sortKey": "2026-07-06-01",
+      "externalKey": "crewlink:2026-07-06:AZ631"
     },
     {
       "periodId": "period-2026-07",
@@ -670,8 +670,8 @@
       "periodId": "period-2026-07",
       "pilotId": "pilot-giacomo-conti",
       "source": "crewlink",
-      "id": "evt-2026-07-12-az615-1",
-      "date": "2026-07-12",
+      "id": "evt-2026-07-11-az615-1",
+      "date": "2026-07-11",
       "kind": "flight",
       "code": "AZ615",
       "title": "BOS → FCO",
@@ -679,14 +679,14 @@
       "departureAirport": "BOS",
       "arrivalAirport": "FCO",
       "aircraftType": "A339",
-      "startAt": "2026-07-12T18:05:00-04:00",
-      "endAt": "2026-07-13T08:05:00+02:00",
+      "startAt": "2026-07-11T18:05:00-04:00",
+      "endAt": "2026-07-12T08:05:00+02:00",
       "checkOut": true,
       "info": "AZ 615 BOS 1805 !0805 FCO 339 · C/O !0850 FCO",
       "flightTimeMin": 480,
       "dutyTimeMin": 525,
-      "sortKey": "2026-07-12-01",
-      "externalKey": "crewlink:2026-07-12:AZ615"
+      "sortKey": "2026-07-11-01",
+      "externalKey": "crewlink:2026-07-11:AZ615"
     },
     {
       "periodId": "period-2026-07",
@@ -1457,8 +1457,8 @@
       "periodId": "period-2026-08",
       "pilotId": "pilot-giacomo-conti",
       "source": "crewlink",
-      "id": "evt-2026-08-30-az769-1",
-      "date": "2026-08-30",
+      "id": "evt-2026-08-31-az769-1",
+      "date": "2026-08-31",
       "kind": "flight",
       "code": "AZ769",
       "title": "DEL → FCO",
@@ -1466,14 +1466,14 @@
       "departureAirport": "DEL",
       "arrivalAirport": "FCO",
       "aircraftType": "A339",
-      "startAt": "2026-08-30T03:00:00+05:30",
-      "endAt": "2026-08-30T08:10:00+02:00",
+      "startAt": "2026-08-31T03:00:00+05:30",
+      "endAt": "2026-08-31T08:10:00+02:00",
       "checkOut": true,
       "info": "AZ 769 DEL 0300 !0810 FCO 339 · C/O !0855 FCO",
       "flightTimeMin": 520,
       "dutyTimeMin": 565,
-      "sortKey": "2026-08-30-01",
-      "externalKey": "crewlink:2026-08-30:AZ769"
+      "sortKey": "2026-08-31-01",
+      "externalKey": "crewlink:2026-08-31:AZ769"
     },
     {
       "periodId": "period-2026-09",
@@ -2505,7 +2505,7 @@
       "marker": "DEL",
       "name": "Hyatt Regency Delhi",
       "checkInDate": "2026-06-14",
-      "checkOutDate": "2026-06-15",
+      "checkOutDate": "2026-06-16",
       "cityOrAirport": "DEL"
     },
     {
@@ -2525,7 +2525,7 @@
       "marker": "BOS",
       "name": "Hilton Boston Park Plaza",
       "checkInDate": "2026-07-10",
-      "checkOutDate": "2026-07-12",
+      "checkOutDate": "2026-07-11",
       "cityOrAirport": "BOS"
     },
     {
@@ -2565,7 +2565,7 @@
       "marker": "DEL",
       "name": "Hyatt Regency Delhi",
       "checkInDate": "2026-08-29",
-      "checkOutDate": "2026-08-30",
+      "checkOutDate": "2026-08-31",
       "cityOrAirport": "DEL"
     },
     {
